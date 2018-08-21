@@ -12,7 +12,7 @@ b. Can you fix it so that it prints the list of (10) scores per subject with the
 
 c. When you've done that, also print the minimum and average for each subject.
 
-d. Then print the results in a nicely-formatted table.
+d. Then print the results in a nicely-formatted table.Ted
 """
 
 
