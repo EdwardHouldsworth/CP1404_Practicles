@@ -34,14 +34,10 @@ def get_skip_amount():
 
 
 def get_text():
-    user_text = ""
-    finished = False
-    while not finished:
-        try:
-            user_text = str(input("Enter some text: "))
-            finished = True
-        except ValueError:
-            print("Invalid input")
+    user_text = input("Enter some text: ")
+    while user_text == "":
+        print("Invalid input")
+        user_text = input("Enter some text: ")
     return user_text
 
 
