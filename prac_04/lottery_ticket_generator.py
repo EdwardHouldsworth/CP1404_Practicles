@@ -18,30 +18,30 @@ NUMBER_SET = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
 
 def main():
     number_of_quickpicks = int(input("How many quickpicks? "))
-    quick_picks = [[0]]
-    quick_picks = generate_quickpicks(number_of_quickpicks, quick_picks)
-    display_quickpicks(quick_picks)
+    quickpicks = [[0]]
+    quickpicks = generate_quickpicks(number_of_quickpicks, quickpicks)
+    quickpicks.remove([0])
+    display_quickpicks(quickpicks)
     print("Done")
 
 
-def display_quickpicks(quick_picks):
-    quick_picks.sort()
-    for element in quick_picks:
+def display_quickpicks(quickpicks):
+    quickpicks.sort()
+    for element in quickpicks:
         print("{:<3} {:<3} {:<3} {:<3} {:<3}"
               .format(element[0], element[1], element[2], element[3], element[4]))
 
 
-def generate_quickpicks(number_of_quickpicks, quick_picks):
+def generate_quickpicks(number_of_quickpicks, quickpicks):
     for x in range(0, number_of_quickpicks):
         valid_ticket = False
         while not valid_ticket:
             ticket = generate_ticket()
-            valid_ticket = check_ticket(ticket, quick_picks)
+            valid_ticket = check_ticket(ticket, quickpicks)
             # print(check_ticket(ticket, quickpicks))
             if valid_ticket:
-                quick_picks += [ticket]
-    quick_picks.remove([0])
-    return quick_picks
+                quickpicks += [ticket]
+    return quickpicks
 
 
 def generate_ticket():
