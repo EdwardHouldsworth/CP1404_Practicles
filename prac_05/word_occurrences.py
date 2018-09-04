@@ -1,13 +1,11 @@
 text = input("Text: ")
 words = text.split()
-word_count = {}
+word_occurances = {}
 for word in words:
-    if word in word_count:
-        word_count[word] += 1
+    if word in word_occurances:
+        word_occurances[word] += 1
     else:
-        word_count[word] = 1
+        word_occurances[word] = 1
 
-
-
-for word in word_count:
-    print("{}  {}".format(word, word_count[word]))
+for word in word_occurances:
+    print("{:<2} - {}".format(word_occurances[word], word))
