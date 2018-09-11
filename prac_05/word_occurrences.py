@@ -7,5 +7,5 @@ for word in words:
     else:
         word_occurances[word] = 1
 
-for word in word_occurances:
+for word in sorted(word_occurances):
     print("{:<2} - {}".format(word_occurances[word], word))

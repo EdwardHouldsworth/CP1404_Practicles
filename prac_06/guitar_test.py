@@ -13,13 +13,12 @@ def main():
     guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
     guitars.append(Guitar("Lag Arcane", 2009, 650.75))
 
-    while True:
-        name = input("Guitar Name: ")
-        if name == '':
-            break
+    name = input("Guitar Name: ")
+    while name != '':
         year = int(input("Guitar make Year: "))
         cost = int(input("Guitar Cost: "))
         guitars.append(Guitar(name, year, cost))
+        name = input("Guitar Name: ")
 
     print("These are my guitars:")
     for i, guitar in enumerate(guitars):
