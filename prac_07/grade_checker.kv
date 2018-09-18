@@ -1,0 +1,14 @@
+BoxLayout:
+    orientation: "vertical"
+    TextInput:
+        font_size: 32
+        id: input_field
+    BoxLayout:
+        Button:
+            font_size: 32
+            text: "Check Grade"
+            on_press: app.check_grade(input_field.text)
+        Label:
+            #id: output_grade
+            text: app.grade
+            font_size: 32
