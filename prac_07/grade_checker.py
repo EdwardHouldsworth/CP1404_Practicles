@@ -26,7 +26,7 @@ class SimpleApp(App):
             elif grade >= 50:
                 self.grade = "P"
             else:
-                self.grade = "F"
+                self.grade = "N"
         else:
             self.grade = "-"
 
