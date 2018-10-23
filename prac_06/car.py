@@ -2,7 +2,12 @@
 
 
 class Car:
-    """Represent a Car object."""
+    """Represents a Car object.
+    >>> add_fuel(40)
+    self.fuel == 40
+    >>> add_fuel()
+    self.fuel == 0
+    """
 
     def __init__(self, name="", fuel=0):
         """Initialise a Car instance.
@@ -16,11 +21,11 @@ class Car:
     def __str__(self):
         return "{}, fuel= {}, odometer= {}".format(self.name, self.fuel, self.odometer)
 
-    def add_fuel(self, amount):
+    def add_fuel(self, amount=0):
         """Add amount to the car's fuel."""
         self.fuel += amount
 
-    def drive(self, distance):
+    def drive(self, distance=0):
         """Drive the car a given distance.
 
         Drive given distance if car has enough fuel
